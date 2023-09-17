@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const categoria = new Schema({
+const categoriaSchema = new Schema({
     nome:{
         type: String,
         require: true
@@ -17,4 +17,4 @@ const categoria = new Schema({
 
 })
 
-mongoose.model('categorias', categoria)
+module.exports = mongoose.model('categorias', categoriaSchema)
