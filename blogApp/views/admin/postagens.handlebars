@@ -15,6 +15,10 @@
         <a href="/admin/postagens/edit/{{_id}}">
             <button class="btn btn-success mt-3">Editar</button>
         </a>
+        <form action="/admin/postagens/deletar" method="post">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button class="btn btn-danger mt-2" type="submit">Deletar</button>
+        </form>
     </div>
 </div>
     {{else}}
