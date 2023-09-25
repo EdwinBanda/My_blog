@@ -140,7 +140,7 @@
     app
 
 //Outros
-const port = 8086
+const port = process.env.PORT || 8086
 app.listen(port, ()=>{
     console.log("Servidor rodando no http://localhost:8086")
 })
