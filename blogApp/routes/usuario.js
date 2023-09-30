@@ -90,15 +90,12 @@ router.post('/login', (req, res, next)=>{
 
 router.get('/logout', (req, res)=>{
     req.logOut(()=>{
-<<<<<<< HEAD
         req.flash('success_msg', "Deslogado com sucesso")
-=======
         req.flash('success_msg', "Deslogado com sucesso!")
         res.redirect('/')
     })
     .catch((err)=>{
         req.flash('error_msg', "Erro ao deslogar a sessao")
->>>>>>> 55a6fe3fda1393a429a907de95460660c99c58dd
         res.redirect('/')
     })
 })
