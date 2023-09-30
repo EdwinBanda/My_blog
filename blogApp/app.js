@@ -58,7 +58,7 @@
         app.use(express.static(path.join(__dirname, "public")))
     
     app.use((req, res, next)=>{
-        console.log("Hey, sou um middleware")
+        console.log("Hey")
         next()
     })
 //Rotas
@@ -137,10 +137,9 @@
 
     app.use('/admin', admin)
     app.use('/usuarios', usuarios)
-    app
 
 //Outros
-const port = 8086
+const port = process.env.PORT || 8086
 app.listen(port, ()=>{
     console.log("Servidor rodando no http://localhost:8086")
 })
